@@ -10,11 +10,11 @@ class AdminCog(commands.Cog, name='admin'):
         self.bot = bot
         
     def updateEmbed(self, description: str = ''):
-        embed = discord.Embed(title=f'**奏寶 v{self.bot.version}**', description=description, color=0xBB6688)
-        embed.set_author(name="奏寶", url="https://github.com/Ayaakaa/kanade_bot",
-                            icon_url="https://i.imgur.com/oXEl8tP.jpg")
+        embed = discord.Embed(title=f'**三月七 v{self.bot.version}**', description=description, color=0xBB6688)
+        embed.set_author(name="三月七", url="https://github.com/Ayaakaa/March-7th-Bot",
+                            icon_url="https://i.imgur.com/Zp9bgVN.jpeg")
         embed.set_image(url="https://i.imgur.com/1SJ6Y0Y.jpg")
-        embed.set_footer(text=f"奏寶 - by 綾霞 Ayaakaa",
+        embed.set_footer(text=f"三月七 - by 綾霞 Ayaakaa",
                         icon_url="https://avatars.githubusercontent.com/u/80079457?v=4")
         return embed
 

@@ -11,18 +11,18 @@ class MainCog(commands.Cog, name='main'):
 
     @app_commands.command(name='about', description='有關奏寶')
     async def about(self, interaction: Interaction):
-        embed = defaultEmbed(title="奏寶 • Kanade Bot",
+        embed = defaultEmbed(title="三月七 • March 7th Bot",
                              description="**奏寶**是由**綾霞**製作的機器人")
-        embed.set_author(name="奏寶", url="https://github.com/Ayaakaa/kanade_bot",
-                         icon_url="https://i.imgur.com/oXEl8tP.jpg")
-        embed.set_image(url="https://i.imgur.com/ZW5OWx8.png")
-        embed.set_footer(text=f"奏寶 v{self.bot.version} - by 綾霞 Ayaakaa")
+        embed.set_author(name="三月七", url="https://github.com/Ayaakaa/March-7th-Bot",
+                         icon_url="https://i.imgur.com/Zp9bgVN.jpeg")
+        embed.set_image(url="https://i.imgur.com/sU7bXs1.jpeg")
+        embed.set_footer(text=f"三月七 v{self.bot.version} - by 綾霞 Ayaakaa")
         await interaction.response.send_message(embed=embed)
     
     @commands.Cog.listener()
     async def on_message(self, msg: discord.Message):
-        tuple1 = ('奏寶：','奏奏：')
-        tuple2 = ('奏寶:','奏奏:')
+        tuple1 = ('三月七：','小三月：','三月：')
+        tuple2 = ('三月七:','小三月:','三月:')
         if msg.author.id == 831883841417248778 and msg.content[0:3] in tuple1 or msg.content[0:3] in tuple2:
             global text
             
