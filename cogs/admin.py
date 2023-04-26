@@ -43,7 +43,7 @@ class AdminCog(commands.Cog, name='admin'):
             await interaction.response.send_message(embed=embed)
 
 
-    @app_commands.command(name='say', description='用奏寶說話')
+    @app_commands.command(name='say', description='用三月七說話')
     async def say(self, i: Interaction, message: str):
         ayaakaa = await is_ayaakaa(i)
         if ayaakaa == True:

@@ -9,10 +9,10 @@ class MainCog(commands.Cog, name='main'):
     def __init__(self, bot):
         self.bot = bot
 
-    @app_commands.command(name='about', description='有關奏寶')
+    @app_commands.command(name='about', description='有關三月七')
     async def about(self, interaction: Interaction):
         embed = defaultEmbed(title="三月七 • March 7th Bot",
-                             description="**奏寶**是由**綾霞**製作的機器人")
+                             description="**三月七**是由**綾霞**製作的機器人")
         embed.set_author(name="三月七", url="https://github.com/Ayaakaa/March-7th-Bot",
                          icon_url="https://i.imgur.com/Zp9bgVN.jpeg")
         embed.set_image(url="https://i.imgur.com/sU7bXs1.jpeg")
