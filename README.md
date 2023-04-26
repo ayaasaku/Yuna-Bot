@@ -1,4 +1,4 @@
-<h1 align="center">三月七 • Marcch 7th Bot</h1>
+<h1 align="center">三月七 • March 7th Bot</h1>
 
 <p align="center">
 <img src="https://i.imgur.com/Zp9bgVN.jpeg" width="430" height="430" />
