@@ -23,11 +23,11 @@ class MainCog(commands.Cog, name='main'):
     async def on_message(self, msg: discord.Message):
         tuple1 = ('三月七：','小三月：','三月：')
         tuple2 = ('三月七:','小三月:','三月:')
-        if msg.author.id == 831883841417248778 and msg.content[0:3] in tuple1 or msg.content[0:3] in tuple2:
+        if msg.author.id == 831883841417248778 and msg.content[0:3] in tuple1 or msg.content[0:3] in tuple2 or msg.content[0:4] in tuple1 or msg.content[0:4] in tuple2:
             global text
             
-            if msg.content[0:3] in tuple1: text = msg.content.split('：')[1]
-            elif msg.content[0:3] in tuple2: text = msg.content.split(': ')[1]
+            if msg.content[0:3] or msg.content[0:4] in tuple1: text = msg.content.split('：')[1]
+            elif msg.content[0:3] or msg.content[0:4] in tuple2: text = msg.content.split(': ')[1]
             else: return
             
             if msg.reference != None or msg.reference is not None:
