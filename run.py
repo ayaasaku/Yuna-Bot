@@ -8,7 +8,7 @@ import aiosqlite
 import time
 
 from discord import (Game, HTTPException, Intents, Interaction, Message,
-                     Status, app_commands)
+                     Status, app_commands, CustomActivity)
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
 
@@ -52,7 +52,7 @@ class March7thBot(commands.Bot):
     async def on_ready(self):
         await self.change_presence(
             status=Status.online,
-            activity=Game(name=f'星穹鐵道')
+            activity=CustomActivity(name='Listening アイドル', )
         )
         print(log(True, False, 'Bot', f'Logged in as {self.user}'))
 
