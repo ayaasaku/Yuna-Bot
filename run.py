@@ -52,7 +52,7 @@ class March7thBot(commands.Bot):
     async def on_ready(self):
         await self.change_presence(
             status=Status.online,
-            activity=CustomActivity(name='Listening アイドル')
+            activity=Game(name='星穹鐵道')
         )
         print(log(True, False, 'Bot', f'Logged in as {self.user}'))
 
