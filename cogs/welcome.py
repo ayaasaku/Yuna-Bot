@@ -26,7 +26,7 @@ class WelcomeCog(commands.Cog, name='welcome'):
         member_name = member.display_name
         leave_messages = ['一路好走', '嗚嗚嗚', '走了？']
         leave_embed = defaultEmbed(title=f'{member_name} 離開了我們', description=random.choice(leave_messages))
-        leave_embed.set_image(url='https://i.imgur.com/B0fhxZp.gif')
+        leave_embed.set_image(url='https://media.tenor.com/WNKvxNgsV8sAAAAC/kuma-kuma-kuma-bear-tired.gif')
         channel = self.bot.get_channel(1001811652590719020)
         await channel.send(embed=leave_embed)
    
