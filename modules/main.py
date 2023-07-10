@@ -21,11 +21,11 @@ async def is_ayaakaa (interaction:discord.Interaction):
 
 #embeds    
 def defaultEmbed(title: str = '', description: str = ''):
-    embed = Embed(title=title, description=description, color=0xBB6688)
+    embed = Embed(title=title, description=description, color=Colour.from_str('#55777D'))
     return embed
 
 def loadingEmbed(text: str):
-    embed = Embed(title = f'**正在獲取{text}資料...**', description = f'獲取資料需時，請耐心等候', color = Colour.from_str('0xBB6688'))
+    embed = Embed(title = f'**正在獲取{text}資料...**', description = f'獲取資料需時，請耐心等候', color=Colour.from_str('#55777D'))
     embed.set_thumbnail(url='https://i0.wp.com/waritaku.com/wp-content/uploads/2020/10/KumaKumaKumaBear-Episode1-Omake-12.gif?resize=600%2C332&ssl=1')
     return embed     
 
