@@ -20,7 +20,8 @@ class WelcomeCog(commands.Cog, name='welcome'):
             
             channel = self.bot.get_channel(1001811652590719020)
             await channel.send(embed=welcome_embed)
-    
+            
+    @commands.Cog.listener()
     async def on_member_remove(self, member: Member):
         member_name = member.display_name
         leave_messages = ['一路好走', '嗚嗚嗚', '走了？']
