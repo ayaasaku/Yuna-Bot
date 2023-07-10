@@ -11,7 +11,7 @@ class MainCog(commands.Cog, name='main'):
 
     @app_commands.command(name='about', description='有關優奈')
     async def about(self, interaction: Interaction):
-        embed = defaultEmbed(title="優奈 •Yuna Bot",
+        embed = defaultEmbed(title="優奈 • Yuna Bot",
                              description="**優奈**是由綾霞製作的機器人")
         embed.set_author(name="優奈", url="https://github.com/Ayaakaa/Yuna-Bot",
                          icon_url="https://i.imgur.com/hT0exiA.jpg")
