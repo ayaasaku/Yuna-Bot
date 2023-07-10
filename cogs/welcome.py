@@ -12,8 +12,8 @@ class WelcomeCog(commands.Cog, name='welcome'):
     async def on_member_join(self, member: Member):
         member_name = member.display_name
         welcome_messages = ['歡迎加入奈奈應援團～', '奏是真冬的老婆喔', '我們群主很常改名字的']
-        welcome_embed = defaultEmbed(title=f'歡迎{member_name}加入 Kuma²', description=random.choice(welcome_messages))
-        welcome_embed.set_image(url='https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwJMi1MtAYxvArscI4zlZh9c')
+        welcome_embed = defaultEmbed(title=f'歡迎 {member_name} 加入 Kuma²', description=random.choice(welcome_messages))
+        welcome_embed.set_image(url='https://i.imgur.com/B0fhxZp.gif')
         if member.guild.id == 1001466950309924876:
             role = member.guild.get_role(1001478249773289562)
             await member.add_roles(role)

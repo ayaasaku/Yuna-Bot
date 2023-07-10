@@ -42,7 +42,7 @@ def notAyaakaaEmbed():
 
 def successEmbed(title: str = '', message: str = ''):
     embed = Embed(title=title, description=message, color= Colour.from_str('#3DC05F'))
-    embed.set_thumbnail(url='https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwJMi1MtAYxvArscI4zlZh9c')
+    embed.set_thumbnail(url='https://i.imgur.com/B0fhxZp.gif')
     return embed
 
 
