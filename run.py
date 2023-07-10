@@ -14,7 +14,6 @@ from dotenv import load_dotenv
 
 from modules.debug import DebugView
 from modules.main import errEmbed, log
-#from utility.apps.sekai.virtual_live_info import virtual_live_ping_tw, virtual_live_ping_jp
 
 load_dotenv()
 token = os.getenv('TOKEN')
@@ -26,7 +25,7 @@ intents.reactions = True
 intents.message_content = True
 intents.presences = True
 
-class March7thBot(commands.Bot):
+class YunaBot(commands.Bot):
     def __init__(self):
         super().__init__(
             command_prefix=['!','%'],
@@ -38,7 +37,7 @@ class March7thBot(commands.Bot):
         self.repeat = False
         self.prev = False
         self.session = aiohttp.ClientSession()
-        self.db = await aiosqlite.connect("march_7th_data.db")
+        self.db = await aiosqlite.connect("yuna_data.db")
         self.backup_db = await aiosqlite.connect("backup.db")
         global version
         version = 0.1
@@ -52,7 +51,7 @@ class March7thBot(commands.Bot):
     async def on_ready(self):
         await self.change_presence(
             status=Status.online,
-            activity=Game(name='星穹鐵道')
+            activity=Game(name='異世界')
         )
         print(log(True, False, 'Bot', f'Logged in as {self.user}'))
 
@@ -86,7 +85,7 @@ class March7thBot(commands.Bot):
         return await super().close()
 
 
-bot = March7thBot()
+bot = YunaBot()
 tree = bot.tree
 
 
@@ -105,18 +104,6 @@ async def err_handle(i: Interaction, e: app_commands.AppCommandError):
         embed = errEmbed(message=f'```py\n{e}\n```').set_author(
             name='未知錯誤', icon_url=i.user.avatar)
         await i.channel.send(content=f'{ayaakaa.mention} 系統已將錯誤回報給綾霞, 請耐心等待修復', embed=embed, view=view)
-   
-@bot.listen()
-async def on_ready():
-    task_loop.start() 
-
-    
-@tasks.loop(seconds=1)
-async def task_loop():
-    pass
-    #await virtual_live_ping_tw(bot, session)
-    #await virtual_live_ping_jp(bot, session)
-
 
 bot.run(token)
 

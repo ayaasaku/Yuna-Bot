@@ -26,23 +26,23 @@ def defaultEmbed(title: str = '', description: str = ''):
 
 def loadingEmbed(text: str):
     embed = Embed(title = f'**正在獲取{text}資料...**', description = f'獲取資料需時，請耐心等候', color = Colour.from_str('0xBB6688'))
-    embed.set_thumbnail(url='https://tenor.com/view/march7th-honkai-gif-23810149')
+    embed.set_thumbnail(url='https://i0.wp.com/waritaku.com/wp-content/uploads/2020/10/KumaKumaKumaBear-Episode1-Omake-12.gif?resize=600%2C332&ssl=1')
     return embed     
 
 def errEmbed(title: str = '', message: str = ''):
     embed = Embed(title=title, description=message, color= Colour.from_str('#F13650'))
-    embed.set_thumbnail(url='https://tenor.com/view/honkai-star-rail-march7th-impact-pink-hair-gaze-gif-23371734')
+    embed.set_thumbnail(url='https://media.tenor.com/7iwicNso0FYAAAAC/kuma-kuma-kuma-bear-yuna.gif')
     embed.set_footer(text=f"如果你認為這是一個 BUG，歡迎私訊綾霞 ayaakaa#9815", icon_url=f'' )
     return embed
 
 def notAyaakaaEmbed():
     embed = Embed(title=f'權限不足', description=f'你不是綾霞', color= Colour.from_str('#F13650'))
-    embed.set_thumbnail(url='https://tenor.com/view/honkai-star-rail-march7th-impact-pink-hair-gaze-gif-23371734')
+    embed.set_thumbnail(url='https://media.tenor.com/19kT09qSh_sAAAAC/kuma-kuma-kuma-bear-yuna.gif')
     return embed
 
 def successEmbed(title: str = '', message: str = ''):
     embed = Embed(title=title, description=message, color= Colour.from_str('#3DC05F'))
-    embed.set_thumbnail(url='https://tenor.com/view/march-7th-honkai-star-rail-gif-23373039')
+    embed.set_thumbnail(url='https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwJMi1MtAYxvArscI4zlZh9c')
     return embed
 
 

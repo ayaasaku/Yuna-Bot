@@ -10,11 +10,11 @@ class AdminCog(commands.Cog, name='admin'):
         self.bot = bot
         
     def updateEmbed(self, description: str = ''):
-        embed = discord.Embed(title=f'**三月七 v{self.bot.version}**', description=description, color=0xBB6688)
-        embed.set_author(name="三月七", url="https://github.com/Ayaakaa/March-7th-Bot",
-                            icon_url="https://i.imgur.com/Zp9bgVN.jpeg")
-        embed.set_image(url="https://i.imgur.com/1SJ6Y0Y.jpg")
-        embed.set_footer(text=f"三月七 - by 綾霞 Ayaakaa",
+        embed = discord.Embed(title=f'**優奈 v{self.bot.version}**', description=description, color=0xBB6688)
+        embed.set_author(name="優奈", url="https://github.com/Ayaakaa/Yuna-Bot",
+                            icon_url="https://i.imgur.com/hT0exiA.jpg")
+        embed.set_image(url="https://i.imgur.com/endm5qP.jpg")
+        embed.set_footer(text=f"優奈 - by 綾霞 Ayaakaa",
                         icon_url="https://avatars.githubusercontent.com/u/80079457?v=4")
         return embed
 
@@ -43,7 +43,7 @@ class AdminCog(commands.Cog, name='admin'):
             await interaction.response.send_message(embed=embed)
 
 
-    @app_commands.command(name='say', description='用三月七說話')
+    @app_commands.command(name='say', description='用優奈說話')
     async def say(self, i: Interaction, message: str):
         ayaakaa = await is_ayaakaa(i)
         if ayaakaa == True:
